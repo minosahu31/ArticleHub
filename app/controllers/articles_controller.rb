@@ -40,6 +40,7 @@ class ArticlesController < ApplicationController
   end
 
   def destroy
+     Article.delete_all("id = #{params[:user_id]}")
   end
 
   private 
